@@ -9,32 +9,32 @@ Pour cela le maître du jeu peut utiliser des scénarios d’univers existant ou
 
 
 Technologies utilisées :
-Html & css, php, javascript, mySQL,(JEE ?),(IRC ?), Photoshop, Illustrator
+-Html & css, php, javascript, mySQL,(JEE ?),(IRC ?), Photoshop, Illustrator
 
 Contenu :
-Page d’accueil 
-Présentation des jeux de rôles
-News et articles autour des jeux de rôles
-Interface joueur / maître du jeu / administrateur
+-Page d’accueil 
+-Présentation des jeux de rôles
+-News et articles autour des jeux de rôles
+-Interface joueur / maître du jeu / administrateur
 
 Administration :
-Création de compte utilisateur avec différents niveau de droit
-Système d’e-mail de validation
-Création de la base de donnée
-Sécurisation du site & des bases de données
-Analyse IHM
+-Création de compte utilisateur avec différents niveau de droit
+-Système d’e-mail de validation
+-Création de la base de donnée
+-Sécurisation du site & des bases de données
+-Analyse IHM
 
 
 Plugin / Fonctionnalité :
-Forum / chat temps réel 
-Planning
-Créateur de fiche de personnage pour chaque jeux de rôles
-Créateur d’avatar de personnage
+-Forum / chat temps réel 
+-Planning
+-Créateur de fiche de personnage pour chaque jeux de rôles
+-Créateur d’avatar de personnage
 
 
 Objectif complémentaire :
-Application Android
+-Application Android
 
 
 Besoin matériels & services:
-Hebergeur website & database
+-Hebergeur website & database
