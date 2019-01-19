@@ -1,0 +1,284 @@
+/*
+    Document  : Page d'accueil du PA
+    Modify on : 08 oct. 2018
+    Author    : Louis
+	Group 	  : Hubert, Thibault, Guillaume, Louis, Aurélien
+*/
+
+/* border-box : width/height incluent padding/border mais pas les margin. */
+* {
+    box-sizing: border-box;
+}
+
+/*** Police personnalisée ***/
+@font-face {
+    font-family: Milkshake;
+    src: url('D:\PA\JDR\v2\Milkshake\Milkshake.otf') format('otf'),
+         url('D:\PA\JDR\v2\Milkshake\Milkshake.ttf') format('truetype');
+}
+
+/* Style du body */
+body {
+	font-size: 1em;
+	font-family: Times New Roman,serif;
+	margin:0%;
+}
+
+/* Style des articles/news */
+article{
+	text-align: left;
+	margin: 1%;
+}
+
+/* Style du contenu des artciles/news */
+aside{
+	background-color: #B6B4B6;
+	border: 1px black solid;
+	text-align: justify;
+	padding: 2%;
+}
+
+/* Style des éléments d'une liste */
+li{
+	margin-bottom: 5%;
+}
+
+/* Image flottante */
+.imageflottante{
+    float: left;
+	width:5%;
+}
+
+/*** Elements communs des pages ***/
+/* Style de la bannière entête des avatars */
+#logo_header {
+	display:flex;
+	background:#3f3f3f;
+	justify-content: center;
+	align-items: center;
+}
+/* Block des avatars */
+.fakeimg {
+    background-color: #aaa;
+    width: 5%;
+	height: 5%;
+    padding: 1%;
+	margin: 1%;
+}
+
+
+/* Header/logo */
+.logo {
+    float: left;
+    height: auto;
+}
+
+.titre{
+    float:right;
+}
+
+/* Header/logo Title */             
+.header {
+    background: #aca8a8;
+    color: white;
+}
+/* Style the top navigation bar */
+.menu_compte {
+    display: flex;
+    background-image: linear-gradient(grey,black);
+}
+/* Style the navigation bar links */
+.menu_compte a {
+    color: white;
+    font-family: Times, Times New Roman, serif;
+    font-size: 23px;
+    padding: 1% 2%;
+    text-decoration: none;
+    text-align: center;
+    text-shadow:0 1px 1px #b4b4b4;
+}
+/* Change color on hover */
+.menu_compte a:hover {
+    background-color: #1dd9e0;
+    color: black;
+}
+
+
+/*** Page FAQ ***/
+
+/* Style des questions */
+.faq_question{
+	text-align: left;
+	margin: 1%;
+	font-size: 1.5em;
+	font-family:Milkshake;
+}
+/* Style des réponses */
+.faq_reponse{
+	background-color: #B6B6B6;
+	border: 1px black solid;
+	text-align: justify;
+	padding: 2%;
+	font-size: 1em;
+	font-family: Milkshake, Arial, "Times New Roman", Verdana,sans-serif;
+}
+
+/*** Page contact ***/
+/* Conteneur centrale */
+.conteneur_contact{
+	flex: 60%;
+    background-color: white;
+    padding: 2%;
+}
+/* Block contact */
+.contact_block{
+	background-color: #B6B6B6;
+	border: 1px black solid;
+	text-align: justify;
+	padding: 1%;
+	margin:2.5%;
+	font-size: 1em;
+	font-family: Milkshake, Arial, "Times New Roman", Verdana,sans-serif;
+}
+
+/* Style contact li */
+.contact_li{
+	margin:0%;
+}
+
+/*** Page jdr 1 ***/
+.presentation_jdr_conteneur_central{
+	flex: 80%;
+    background-color: gray;
+}
+.presentation_jdr_titre_page{
+	text-align: center;
+	background-color: pink;
+	padding:0.5%;
+	margin:1%;
+}
+.presentation_jdr_contenu{
+	text-align: justify;
+	background-color: purple;
+	padding:0.5%;
+	margin:1%;
+}
+
+/*** Style page index ***/
+/* Column container */
+#conteneur_central {  
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Création de 3 colonnes de tailles inégales les une à côté des autres */
+/* Colonne de gauche : Menu de navigation entre les pages */
+
+
+.menu_page{
+    display:block; 
+    background:#3f3f3f; 
+    margin:0 auto; 
+    padding:2px; 
+    width:260px;
+    box-shadow:0 1px 3px #171717;
+}
+.menu_page li{
+    display:block; 
+    padding:8px 10px 8px 5px; 
+    margin:0;
+    border-bottom:solid 1px #2e2e2e;
+    border-top:solid 1px #4c4c4c;
+}
+.menu_page li:first-child{border-top:none;} /* le selecteur first-child permet 
+de cibler le premier élément pour lui enlever la bordure */
+.menu_page li:last-child{border-bottom:none;} /* le selecteur last-child permet 
+de cibler le dernier élément pour lui enlever la bordure */
+
+.menu_page li a:before{/* création de la puce avec le selecteur before 
+et l'élément content */
+    content:''; 
+    display:inline-block; 
+    width:10px; 
+    height:10px; 
+    background:#39f8ff; 
+    margin-right:8px; 
+    margin-bottom:4px;
+}
+.menu_page li a{
+    font-family: Times, Times New Roman, serif;
+    font-size:20px; 
+    color:white; 
+    text-decoration:none;
+    text-shadow:0 1px 1px #171717; /* ombre portée d'1px */
+}
+/* transition */
+.menu_page li,
+.menu_page li:hover,
+.menu_page li a, 
+.menu_page li:hover a,  
+.menu_page li a:before, 
+.menu_page li:hover a:before{transition : all .4s ease-out;} /* le temps de 
+transition sera de 0.4 seconde */
+
+.menu_page li:hover a:before{
+    background:#1dd9e0; 
+    width:16px; /* on agrandi la taille du carré lors du survol de la liste */
+    height:16px;
+    margin-right:10px; /* on déplace également le carré */ 
+    margin-bottom:2px; 
+    transform:rotate(405deg); /* on fait faire une rotation de la puce */
+    -webkit-transform:rotate(405deg); /* pour google chrome, safari et android */
+    box-shadow:0 0 4px #39f8ff /* on change l'ombre portée en bleu et diffuse */
+}
+.menu_page li:hover a{
+    padding:0 0 0 10px; /* au survol de la liste on déplace le lien en lui 
+donnant un padding de 10px à gauche */
+    color:#1dd9e0;
+    text-shadow:0 0 4px #39f8ff; /* on lui apporte une ombre portée */
+}
+
+
+/* Colonne centrale */
+.main {
+    flex: 60%;
+    background-color: #3f3f3f;
+    color:white;
+    padding: 2%;
+}
+
+/* Colonne de droite : bannière*/
+.banniere {
+	flex: 10%;
+	padding: 2%;
+    background-image: linear-gradient(to right, #3f3f3f, black);
+}
+
+/* Syle du footer */
+.footer {
+    padding: 1%;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Page forum */
+.menu_page_forum{
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 1% 1%;
+}
+
+.main_forum {
+    flex: 80%;
+    background-color: white;
+    padding: 2%;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+}
